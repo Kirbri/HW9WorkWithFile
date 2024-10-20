@@ -13,20 +13,20 @@
     "registered": "Moscow region, Pyankino",
     "deregistered": ""
   },
-  "children": {
-    "child1": {
+  "child": [
+  {
       "sex": false,
       "fullName": "Sukhozad Yunistianovich Napluisvechko",
       "dateOfBirth": "01.02.03",
       "personalCode": 101
     },
-    "child2": {
+  {
       "sex": false,
       "fullName": "Zadnikov Yunistianovich Napluisvechko",
       "dateOfBirth": "01.01.01",
       "personalCode": 100
     }
-  },
+    ],
   "Responsibilities": [
     "comply with the Constitution of the Russian Federation and laws",
     "pay taxes",

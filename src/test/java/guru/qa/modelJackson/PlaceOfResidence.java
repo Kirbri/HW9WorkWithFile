@@ -8,15 +8,7 @@ public class PlaceOfResidence {
         return registered;
     }
 
-    public void setRegistered(String registered) {
-        this.registered = registered;
-    }
-
     public String getDeregistered() {
         return deregistered;
-    }
-
-    public void setDeregistered(String deregistered) {
-        this.deregistered = deregistered;
     }
 }

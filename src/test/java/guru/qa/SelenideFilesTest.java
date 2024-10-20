@@ -14,29 +14,11 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class SelenideFilesTest extends TestBase{
 
-/*  Если нет в селекторе явного указание ссылке href
-    static {
-        Configuration.fileDownload = FileDownloadMode.PROXY;
-    }*/
-
     @Test
     void downloadTest() throws Exception {
         open("https://junit.org/junit5/docs/current/user-guide/");
         File downloaded = $(".paragraph [href=\"junit-user-guide-5.11.2.pdf\"]").download();
-
-//        InputStream is;
-//        try {
-//            is = new FileInputStream(downloaded);
-//        } finally {
-//            if (is != null) {
-//                is.close();
-//            }
-//        }
-
-//        InputStream is = new FileInputStream(downloaded);
-
         try (InputStream is = new FileInputStream(downloaded)){
-            //something
             byte[] data = is.readAllBytes();
             String dataAsString = new String(data, StandardCharsets.UTF_8);
             Assertions.assertTrue(dataAsString.contains("JUnit 5 User Guide"));
